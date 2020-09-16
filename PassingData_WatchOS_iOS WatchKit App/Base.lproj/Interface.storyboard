@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PassingData_WatchOS_iOS_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Interval  Value" textAlignment="right" id="l5a-eq-0kb"/>
+                        <button width="136" height="23" alignment="left" title="Start" id="dhR-nK-ofv">
+                            <color key="backgroundColor" red="0.40000000000000002" green="0.90196078430000004" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="startButtonAction" destination="AgC-eL-Hgc" id="MSQ-LW-NwP"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="24" alignment="left" text="x value" textAlignment="right" id="DVz-Qc-5h0"/>
+                        <label width="136" height="24" alignment="left" text="y value" textAlignment="right" id="ISN-c6-mKW"/>
+                        <label width="136" height="24" alignment="left" text="z value" textAlignment="right" id="Mgf-E1-4Yr"/>
+                        <button width="136" height="23" alignment="left" title="End" id="kMY-pc-eWa">
+                            <color key="backgroundColor" red="1" green="0.45098039220000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="endButtonAction" destination="AgC-eL-Hgc" id="SXa-PK-J7S"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="intervalValueLabel" destination="l5a-eq-0kb" id="2nR-iO-LiP"/>
+                        <outlet property="xValueLabel" destination="DVz-Qc-5h0" id="TZ4-IL-DrU"/>
+                        <outlet property="yValueLabel" destination="ISN-c6-mKW" id="e3d-o5-pxs"/>
+                        <outlet property="zValueLabel" destination="Mgf-E1-4Yr" id="Yat-1z-lh5"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="344.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,14 +58,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="PassingData_WatchOS_iOS_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="PassingData_WatchOS_iOS_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
